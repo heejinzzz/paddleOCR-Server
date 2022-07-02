@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service C_OCR {
+  rpc Ocr (Request) returns (Response) {}
+}
+
+message Request {
+  string ImageType = 1;
+  bytes ImageBytes = 2;
+}
+
+message Response {
+  string Text = 1;
+  bytes ImageBytes = 2;
+}
